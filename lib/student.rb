@@ -19,6 +19,7 @@ class Student
     SQL
     DB.execute(sql).collect do |student|
       student.new_from_db(student)
+      binding.pry
     end
   end
 
