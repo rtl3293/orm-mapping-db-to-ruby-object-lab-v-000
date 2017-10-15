@@ -21,8 +21,8 @@ class Student
     SQL
     binding.pry
     DB[:conn].execute(sql).collect do |student|
-      student.new_from_db(student)
-      binding.pry
+      Student.new_from_db(student)
+      #binding.pry
     end
   end
 
