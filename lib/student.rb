@@ -111,6 +111,6 @@ class Student
       where grade = ?
     SQL
 
-    DB[:conn].execute(sql, grade))[0..number - 1]
+    DB[:conn].execute(sql, grade))
   end
 end
