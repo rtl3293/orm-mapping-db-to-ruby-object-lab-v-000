@@ -95,6 +95,12 @@ class Student
   end
 
   def self.first_student_in_grade_10
+    sql = <<-SQL
+      SELECT *
+      FROM students
+      where grade = 10
+    SQL
 
+    DB[:conn].execute(sql)[0]
   end
 end
