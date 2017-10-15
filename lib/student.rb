@@ -90,6 +90,6 @@ class Student
       FROM students
       where grade = 10
     SQL
-    DB[:conn].execute(sql)[0..number-1]
+    DB[:conn].execute(sql)[0..number - 1]
   end
 end
