@@ -90,6 +90,11 @@ class Student
       FROM students
       where grade = 10
     SQL
+
     DB[:conn].execute(sql)[0..number - 1]
+  end
+
+  def self.first_student_in_grade_10
+
   end
 end
