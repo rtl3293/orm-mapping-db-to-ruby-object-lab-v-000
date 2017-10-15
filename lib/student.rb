@@ -34,6 +34,9 @@ class Student
       FROM students
       WHERE name = ?
     SQL
+    DB[:conn].execute.collect do |student|
+      Student.new_from_db(student)
+    end.first
   end
 
   def save
