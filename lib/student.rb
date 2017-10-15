@@ -101,6 +101,6 @@ class Student
       where grade = 10
     SQL
 
-    DB[:conn].execute(sql)[0]
+    Student.new_from_db(DB[:conn].execute(sql)[0])
   end
 end
