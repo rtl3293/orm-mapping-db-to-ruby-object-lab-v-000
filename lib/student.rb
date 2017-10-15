@@ -104,5 +104,5 @@ class Student
     Student.new_from_db(DB[:conn].execute(sql)[0])
   end
 
-  def all_students_in_grade_X
+  def all_students_in_grade_X(grade)
 end
