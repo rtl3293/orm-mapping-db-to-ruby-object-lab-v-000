@@ -15,7 +15,7 @@ class Student
     # remember each row should be a new instance of the Student class
     sql = <<-SQL  SELECT *
                   FROM students
-             SQL
+    SQL
     DB.execute(sql).collect do |student|
       student.new_from_db(student)
     end
