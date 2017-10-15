@@ -19,7 +19,7 @@ class Student
         SELECT *
         FROM students
     SQL
-    binding.pry
+    #binding.pry
     DB[:conn].execute(sql).collect do |student|
       Student.new_from_db(student)
       #binding.pry
